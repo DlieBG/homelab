@@ -37,7 +37,7 @@ I structure the templates in the following three groups:
     [Docs](https://www.mongodb.com/)
 - Redis \
     [Docs](https://redis.io/)
-- MinIO \
-    [Docs](https://min.io/)
 - InfluxDB \
     [Docs](https://www.influxdata.com/)
+- MinIO \
+    [Docs](https://min.io/)
