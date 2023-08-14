@@ -9,6 +9,8 @@ I structure the templates in the following three groups:
 # Internal
 - Wiki.js \
     [Docs](https://js.wiki/)
+- Planka \
+    [Docs](https://planka.app/)
 - Schwering App \
     [Repo](https://github.com/DlieBG/schwering_app)
     - Schwering App Light \

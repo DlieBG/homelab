@@ -25,7 +25,7 @@ services:
       - ./data/project-background-images:/app/public/project-background-images
       - ./data/attachments:/app/private/attachments
     ports:
-      - 3000:1337
+      - 8702:1337
     environment:
       - TRUST_PROXY=0
       - DATABASE_URL=postgresql://postgres@postgres/planka
