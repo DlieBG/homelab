@@ -1,0 +1,7 @@
+.env
+redisdata/
+pgdata/
+data/
+media/
+export/
+consume/
