@@ -66,3 +66,12 @@ services:
     environment:
       PAPERLESS_REDIS: redis://broker:6379
       PAPERLESS_DBHOST: db
+
+  backup:
+    build: backup
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./data:/backup/data
+      - ./media:/backup/media
+      - ./pgdata:/backup/pgdata
