@@ -1,0 +1,11 @@
+version: "3"
+services:
+  resticserver:
+    image: restic/rest-server:latest
+    restart: unless-stopped
+    environment:
+      DISABLE_AUTHENTICATION: true
+    volumes:
+      - ./data:/data
+    ports:
+      - 8704:8000
