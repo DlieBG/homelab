@@ -2,7 +2,7 @@ version: "3"
 services:
   resticserver:
     image: restic/rest-server:latest
-    restart: never
+    restart: no
     environment:
       DISABLE_AUTHENTICATION: true
     volumes:
