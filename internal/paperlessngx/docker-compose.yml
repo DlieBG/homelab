@@ -53,7 +53,16 @@ services:
     ports:
       - "8703:8000"
     healthcheck:
-      test: ["CMD", "curl", "-fs", "-S", "--max-time", "2", "http://localhost:8000"]
+      test:
+        [
+          "CMD",
+          "curl",
+          "-fs",
+          "-S",
+          "--max-time",
+          "2",
+          "http://localhost:8000"
+        ]
       interval: 30s
       timeout: 10s
       retries: 5
@@ -66,12 +75,11 @@ services:
     environment:
       PAPERLESS_REDIS: redis://broker:6379
       PAPERLESS_DBHOST: db
-
-  backup:
-    build: backup
-    restart: unless-stopped
-    env_file: .env
-    volumes:
-      - ./data:/backup/data
-      - ./media:/backup/media
-      - ./pgdata:/backup/pgdata
+  # backup:
+  #   build: backup
+  #   restart: unless-stopped
+  #   env_file: .env
+  #   volumes:
+  #     - ./data:/backup/data
+  #     - ./media:/backup/media
+  #     - ./pgdata:/backup/pgdata
