@@ -1,0 +1,10 @@
+version: "3"
+services:
+  storjgateway:
+    image: storjlabs/gateway
+    command: run
+    restart: unless-stopped
+    volumes:
+      - ./config:/root/.local/share/storj/gateway
+    ports:
+      - 8705:7777
