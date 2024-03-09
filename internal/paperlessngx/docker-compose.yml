@@ -45,7 +45,8 @@ services:
       POSTGRES_PASSWORD: paperless
 
   webserver:
-    image: ghcr.io/paperless-ngx/paperless-ngx:latest
+    image: ghcr.io/dliebg/paperless-ngx/schwering-dms:latest
+    # image: ghcr.io/paperless-ngx/paperless-ngx:latest
     restart: unless-stopped
     depends_on:
       - db
@@ -75,11 +76,3 @@ services:
     environment:
       PAPERLESS_REDIS: redis://broker:6379
       PAPERLESS_DBHOST: db
-  # backup:
-  #   build: backup
-  #   restart: unless-stopped
-  #   env_file: .env
-  #   volumes:
-  #     - ./data:/backup/data
-  #     - ./media:/backup/media
-  #     - ./pgdata:/backup/pgdata
